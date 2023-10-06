@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*display flex para que as divs fiquem lado a lado*/
+.menu-superior{
+    background-color: blue;
+    display: flex;
+}
+
+.menu-superior .botao{
+    text-decoration: none;
+    display: block;
+    padding: 7px;
+    color: rgb(255, 255, 255);
+}
+
+.menu-superior .botao:hover, .dropdown .dropdown-content .link-drop:hover{
+    background-color: #f0ff69;
+    color: black;
+}
+
+/*display none para que os links só apareça quando o display for block no hover*/
+.dropdown .dropdown-content{
+    position: absolute;
+    background-color: lightblue;
+    width: 200px;
+    display: none;
+}
+
+/*o display block nos links dentro do dropdown content para que eles fiquem organizados de maneira vertical como no menu lateral*/
+.dropdown .dropdown-content .link-drop{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 7px;            
+}
+
+/*Quando o curso estiver por cima do dropdown, o display do dropdown content que muda para block e assim ele aparece*/
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.container {
+    display: flex;
+}
+
+/*O coteúdo sendo 80vw como pedido  na "a" da 3*/
+.container .conteudo{
+    width: 80vw;
+}
+
+/*a barra ocupando 2vw como pedido na a da 2 e 1200px como pedido no b*/
+.container .esquerdo{
+    width: 20vw;
+    height: 1200px;
+    background-color: rgb(41, 41, 255);
+}
+
+
+.container .esquerdo .link-esquerdo{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 12px;
+}
+
+.container .esquerdo .link-esquerdo:hover{
+    background-color: #f0ff69;
+    color: black;
+}
+
+/*interação count infinite como pedido na b da 3*/
+/*o width e o heigth iguais para que o quadrado, quando definido o border radius de 50% fique em forma de circulo*/
+/*a animação de girar durando 1 segundo para ser completa*/
+.loading {
+    width: 150px;
+    height: 150px;
+    /* background-color: blue; */
+    border-radius: 50%;
+    border: 30px solid rgba(128, 128, 128, 0.245);
+    border-top: 30px solid blue;
+    animation-name: rodar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+/*O kayframes para a animação de girar:
+- começando em 0 graus para rodar 360*/
+@keyframes rodar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .container .esquerdo{
+        width: 100%;
+    }
+}
+
+/*padding para o conteúdo*/
+
+.container article{
+    padding: 15px;
+}
