@@ -3,22 +3,26 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /*display flex para que as divs fiquem lado a lado*/
 .menu-superior{
     background-color: blue;
     display: flex;
 }
 
+/*nao entendi como fazer o botao 3d, o link na prova tava quebrado*/
 .menu-superior .botao{
     text-decoration: none;
     display: block;
     padding: 7px;
     color: rgb(255, 255, 255);
+    box-shadow: 10px black;
 }
 
 .menu-superior .botao:hover, .dropdown .dropdown-content .link-drop:hover{
     background-color: #f0ff69;
     color: black;
+    
 }
 
 /*display none para que os links só apareça quando o display for block no hover*/
